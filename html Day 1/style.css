@@ -1,0 +1,229 @@
+body{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+*{
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+.header{
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 10%;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: #fff;
+    height: 161px;
+}
+.logo-hldr{
+    width: 150px;
+}
+
+.logo-hldr img{
+    width: 100%;
+}
+.sub_nav{
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    z-index: 1;
+    padding: 0 10%;
+    top: 161px;
+}
+.nav_link{
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    justify-content: center;
+}
+.nav_link a{
+    text-decoration: none;
+    color: gray;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+.nav_link a:hover{
+    background: #eaeaea;
+}
+.nav_link a.active{
+    color: #000;
+    background: none;
+}
+.btn{
+    border: none;
+    padding: 10px 15px;
+    background: none;
+    cursor: pointer;
+}
+.btn:hover{
+    background: #eaeaea;
+    border-radius: 20px;
+}
+.btn-combo{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    gap: 6px;
+    background: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-combo:hover{
+    box-shadow: 1px 2px 3px #ccc;
+}
+.d-flex{
+    display: flex;
+}
+.d-flex--center{
+    align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}
+.search_pane{
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    align-items: center;
+    min-width: 600px;
+    padding: 10px 12px;
+    margin: 10px auto;
+    box-shadow: 1px 2px 3px #ccc;
+    position: relative;
+}
+.search_icon{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 10px;
+    border-radius: 50%;
+    padding: 5px;
+    background: red;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.search_pane .column{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px 20px;
+    border-right: 1px solid #ccc;
+}
+.search_pane .column:hover{
+    background: #eaeaea;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+.search_pane .column:nth-child(4){
+    border-right: 0px;
+}
+.search_pane .column label{
+    font-size: 12px;
+    color: grey
+}
+.search_pane .column span{
+    font-size: 13px;
+}
+.sub_nav ul{
+    padding: 0px;
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    top:161px;
+}
+.sub_nav ul li{
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    padding: 0px 10px 10px 10px;
+    font-size: 13px;
+    color: gray;
+    cursor: pointer;
+}
+.sub_nav ul li:hover{
+    border-bottom: 1px solid gray;
+}
+.sub_nav ul li.selected{
+    color: #000;
+    border-bottom: 1px solid #000;
+
+}
+.sub_nav ul li.selected img{
+    opacity: 1;
+}
+.sub_nav ul li img{
+    height: 30px;
+    background-size: cover;
+    opacity: .5;
+}
+.content{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    top: 260px;
+    justify-content: center;
+}
+.tiles{
+    display: flex;
+    flex-direction: column;
+    width: 292px;
+    gap: 4px;
+}
+.tiles .img_hldr{
+    position: relative;
+    height: 225px;
+}
+.tiles .img_hldr img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 15px;
+}
+.tiles button{
+    position: absolute;
+    border: none;
+    background: #fff;
+    font-size: 12px;
+    top: 10px;
+    left: 10px;
+    border-radius: 12px;
+    padding: 5px;
+}
+.tiles .fav_icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.tiles .name{
+    flex: 1;
+    font-size: 14px;
+}
+.tiles .details{
+    font-size: 13px;
+    color: grey;
+}
+@media screen and (max-width: 700px) {
+    .search_pane{
+        min-width: auto;
+    }
+    .sub_nav{
+        overflow: hidden;
+    }
+}
